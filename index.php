@@ -1,7 +1,7 @@
 <?php
 
 class LudoEncryption {
-    public function encrtypt(String $text)
+    public function encrypt(String $text)
     {
         echo $text;
     }
