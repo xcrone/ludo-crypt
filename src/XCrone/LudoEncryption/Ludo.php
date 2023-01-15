@@ -1,6 +1,8 @@
 <?php
 
-class LudoEncryption {
+namespace XCrone\LudoEncryption;
+
+class Ludo {
     public function encrypt(String $text)
     {
         if (! is_string($text)) return;

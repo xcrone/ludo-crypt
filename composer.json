@@ -1,0 +1,26 @@
+{
+    "name": "xcrone/ludo-encryption",
+    "description": "Randomized Encryption",
+    "license": "MIT",
+    "authors": [{
+        "name": "xcrone",
+        "email": "48623158+xcrone@users.noreply.github.com"
+    }],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "^5.0|^6.0|^7.0|^8.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "XCrone\\LudoEncryption": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "Ludo": "XCrone\\LudoEncryption\\Facades\\Ludo"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
