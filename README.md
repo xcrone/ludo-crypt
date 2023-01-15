@@ -1,2 +1,2 @@
-# ludo_encryption
+# Ludo Crypt
 Randomized Encryption
