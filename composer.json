@@ -7,8 +7,8 @@
         "email": "48623158+xcrone@users.noreply.github.com"
     }],
     "require": {
-        "php": "^8.0",
-        "illuminate/support": "^7.0|^8.0|^9.0|^10.0"
+        "php": ">=5.4.0",
+        "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0"
     },
     "autoload": {
         "psr-0": {
