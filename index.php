@@ -3,31 +3,13 @@
 class LudoEncryption {
     public function encrypt(String $text)
     {
-        $uppercase = range('A', 'Z');
-        $lowercase = range('a', 'z');
-        $numbers = range(0, 9);
-        $all = array_merge($uppercase, $lowercase, $numbers);
-        $codes = array();
-
-        foreach ($all as $char1) {
-            foreach ($all as $char2) {
-                foreach ($all as $char3) {
-                    $codes[] = $char1 . $char2 . $char3;
-                }
-            }
-        }
-
-        $chars = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~';
-        $chars = str_split($chars);
-
         if (! is_string($text)) return;
 
-        $ranges = json_decode(file_get_contents('range.json'));
+        $codes = $this->getCodes();
+        $chars = $this->getCharacters();
+        $ranges = $this->getRanges();
 
-        if (! $ranges) return;
-        
         $result = [];
-
         foreach (str_split($text) as $t) {
             if (in_array($t, $chars)) {
                 $char_index = array_search($t, $chars);
@@ -45,5 +27,42 @@ class LudoEncryption {
         $result = str_replace(':::', '', $result);
 
         return $result;
+    }
+
+    private function getCodes()
+    {
+        $uppercase = range('A', 'Z');
+        $lowercase = range('a', 'z');
+        $numbers = range(0, 9);
+        $all = array_merge($uppercase, $lowercase, $numbers);
+        $codes = array();
+
+        foreach ($all as $char1) {
+            foreach ($all as $char2) {
+                foreach ($all as $char3) {
+                    $codes[] = $char1 . $char2 . $char3;
+                }
+            }
+        }
+
+        return $codes;
+    }
+
+    private function getCharacters()
+    {
+        $chars = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~';
+        $chars = str_split($chars);
+
+        return $chars;
+    }
+
+    private function getRanges()
+    {
+        $ranges = json_decode(file_get_contents('range.json'));
+
+        if (! $ranges) return;
+
+        return $ranges;
+
     }
 }
