@@ -15,7 +15,7 @@
             "XCrone\\LudoEncryption": "src/"
         },
         "files": [
-            "src/ludo/ludo.php"
+            "src/ludo.php"
         ]
     },
     "extra": {
