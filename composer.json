@@ -13,16 +13,6 @@
     "autoload": {
         "psr-4": {
             "XCrone\\LudoEncryption": "src/"
-        },
-        "files": [
-            "src/ludo.php"
-        ]
-    },
-    "extra": {
-        "laravel": {
-            "aliases": {
-                "Ludo": "XCrone\\LudoEncryption\\Facades\\Ludo"
-            }
         }
     },
     "minimum-stability": "stable"
