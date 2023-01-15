@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "XCrone\\LudoEncryption": "src/"
+            "XCrone\\LudoEncryption\\": "src/"
         }
     },
     "minimum-stability": "stable"
