@@ -1,6 +1,6 @@
 <?php
 
-namespace XCrone\LudoEncryption;
+namespace XCrone\LudoCrypt;
 
 class Code {
     static public function get()
